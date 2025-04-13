@@ -27,8 +27,10 @@ export default function App() {
           </Content>
         </Wrapper>
       </section>
-      <section className='projects-section'>Projects section</section>
       <section className='about-me-section'>About me section</section>
+      <section className='projects-section'>Projects section</section>
+      <section className='resume-section'>Resume section</section>
+      <section id='contact-section'>Contact section</section>
       <Footer />
     </>
   );
