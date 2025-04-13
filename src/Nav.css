@@ -1,6 +1,7 @@
 nav {
     background-color: #0E1129;
     min-height: 6rem;
+    margin: 0;
 }
 
 .nav-list {
