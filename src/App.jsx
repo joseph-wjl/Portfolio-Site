@@ -6,6 +6,11 @@ import Footer from './Footer.jsx';
 // import { Experience } from "./components/Experience";
 import Spline from '@splinetool/react-spline';
 import styled from 'styled-components';
+import { Suspense } from 'react';
+
+const LazySpline = React.lazy(() =>
+  import('@splinetool/react-spline')
+);
 
 export default function App() {
   return (
@@ -19,7 +24,9 @@ export default function App() {
       </section>
       <section className='work-with-me-section'>
         <Wrapper>
-          <Spline className='spline' scene="https://prod.spline.design/3ArfHPRWmgJbL5vN/scene.splinecode" />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazySpline className='spline' scene="https://prod.spline.design/3ArfHPRWmgJbL5vN/scene.splinecode" />
+          </Suspense>
           <Content>
             <h1>Work With Me</h1>
             <p>Take your design to the next level.</p>
